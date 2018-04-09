@@ -1,0 +1,17 @@
+.wbc-filter { margin-bottom: 30px; }
+.wbc-filter li { display: inline-block; list-style: outside none none; margin-left: 10px; }
+.wbc-filter li a { background: #fa8322 !important; }
+.wbc-filter li a.selected, .wbc-filter li a.button-primary:hover, .wbc-filter li a.button-primary:focus { background: #00003f !important; }
+
+
+.wbc-portfolio-grid .uk-panel-title { border: medium none; color: #ffffff !important; font-size: 15px !important; font-weight: 300 !important; margin-bottom: 20px; padding: 0; }
+.wbc-portfolio-grid .uk-overlay-icons > a { border: 1px solid #ffffff; border-radius: 3px; display: inline-block; height: 35px; line-height: 35px; text-align: center; width: 35px; }
+.wbc-portfolio-grid .uk-overlay-icons > a + a { margin-left: 5px; }
+.wbc-portfolio-grid .uk-overlay-icons > a span { color: #ffffff; }
+.wbc-portfolio-grid .uk-overlay-icons > a:hover { border-color: rgba(255, 255, 255, 0.8); }
+.wbc-portfolio-grid .uk-overlay-icons > a:hover span { color: rgba(255, 255, 255, 0.8); }
+
+@media(max-width: 767px){
+.wbc-filter li a.button-primary { border-radius: 10px; font-size: 12px; line-height: 30px; padding: 5px 15px !important; }
+.wbc-filter li { margin-left: 5px; }
+}

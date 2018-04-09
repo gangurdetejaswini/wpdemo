@@ -1,0 +1,504 @@
+/*
+Theme Name: Kute Theme
+Description: A clean and minimal theme that is completely compatible with WordPress 4.x
+Author: Neosoft Technologies
+Version: 1.0
+*/
+
+/*-------------------------------------------------------
+[Table of contents]
+
+1. Reset
+    
+2. Generic
+
+3. Typography
+
+4. Form
+
+5. Menu
+
+6. Layout
+        
+--------------------------------------------------------*/
+
+
+/*-------------------------------------------------------
+  #Reset Styles
+ -------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+
+/*
+font-family: 'Oswald', sans-serif;
+*/
+*{margin:0; padding:0; outline: 0 none; border: 0 none;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+:focus { outline:0; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after {
+        content: '';
+        content: none;
+}
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table {
+        border-collapse: collapse;
+        border-spacing: 0;
+}
+caption, th, td {
+        text-align:left;
+        font-weight:400;
+}
+audio, canvas, img, video { vertical-align: middle; }
+fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+}
+/* WebKit browsers */
+*::-webkit-input-placeholder {
+color:#2f2f2f;
+opacity:1;
+}
+*:-moz-placeholder {
+ /* FF 4-18 */
+color:#2f2f2f;
+opacity:1;
+}
+*::-moz-placeholder {
+/* FF 19+ */
+color:#2f2f2f;
+opacity:1;
+}
+*:-ms-input-placeholder {
+ /* IE 10+ */
+color:#2f2f2f;
+opacity:1;
+}
+ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+color:transparent;
+}
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
+color:transparent;
+} /* FF 4-18 */
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+color:transparent;
+} /* FF 19+ */
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+color:transparent;
+} /* IE 10+ */
+
+/*-------------------------------------------------------
+ #Generic Styles
+ -------------------------------------------------------*/
+
+.left { float:left; }
+.right { float:right; }
+.clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+.noFloat { float:none; }
+.hidden {
+        position: absolute;
+        top:0;
+        visibility: hidden;
+}
+.pointer { cursor:pointer; }
+a {
+        text-decoration: none;
+        outline: 0;
+        color: #0c215b;
+}
+a:hover, a:focus {
+	color: #000; text-decoration: none;
+}
+p a, p a:visited { line-height: inherit; }
+ul, ol {
+        margin: 0 0 20px 0;
+        list-style-position: inside;
+}
+ul { list-style: none; }
+ul li { list-style: none; }
+ol { list-style-type: decimal; }
+ol ol { list-style: upper-alpha; }
+ol ol ol { list-style: lower-roman; }
+ol ol ol ol { list-style: lower-alpha; }
+ul ul, ol ol, ul ol, ol ul { margin-bottom: 0; }
+/**{-webkit-transition: all 0.3s; transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s;}
+*/ 
+/*-------------------------------------------------------
+ #Typography
+ -------------------------------------------------------*/
+
+body {
+        font-size: 16px;
+        font-family: 'Oswald', sans-serif;
+        line-height:1.8em;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 { /*Heading Styles*/
+        font-weight: 600;
+        margin: 0;
+}
+h1, .h1 {
+        font-size:2.6em;
+        margin-bottom:20px;
+        line-height: 1.1em;
+}
+h2, .h2 {
+        font-size:2.2em;
+        margin-bottom: 20px;
+        line-height: 1.1em;
+}
+h3, .h3 {
+        font-size:1.4em;
+        margin-bottom: 20px;
+        line-height: 1.1em;
+}
+h4, .h4 {
+        font-size:1.4em;
+        margin-bottom: 20px;
+        line-height: 1.1em;
+}
+h5, .h5 {
+        font-size:1em;
+        margin-bottom:12px;
+        line-height: 1.1em;
+}
+p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 { margin-top:1.5em; }
+p {
+        margin: 0.85em 0;
+        line-height:28px;
+}
+p img { margin: 0; }
+
+img, a img {
+        border:none;
+        padding: 0;
+        margin:0;
+        display:inline-block;
+        max-width: 100%;
+        height:auto;
+        image-rendering: optimizeQuality;
+}
+em { font-style: italic; }
+strong, b { font-weight: 700; }
+small { font-size: 80%; }
+
+/*-------------------------------------------------------
+ Forms
+ -------------------------------------------------------*/
+ 
+form { margin-bottom: 20px; }
+fieldset { margin-bottom: 20px; }
+.input-text, input[type="text"], input[type="input"], input[type="password"], input[type="email"], input[type="number"], input[type="url"], input[type="tel"], input[type="search"], textarea, select {
+        -webkit-appearance: none;
+        border: 1px solid #e1e1e1;
+        padding: 8px 6px;
+        outline: none;
+        color: #777;
+        margin: 0;
+        width: 95%;
+        max-width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        background: #F1F1F1;
+        border-radius: 0px;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="url"]:focus, input[type="tel"]:focus, input[type="search"]:focus, textarea:focus {
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+        color: #555;
+}
+input[type="submit"], #submit, .button {
+        background: #000000;
+        color: #ffffff;
+        padding:9px 22px;
+        cursor:pointer;
+        border:none;
+        -webkit-appearance: none;
+        border-radius: 0px;
+        font-weight: 700;
+}
+input[type="submit"]:hover, #submit:hover, .button:hover{
+        background: #0c215b;
+}*/
+textarea {
+        min-height: 60px;
+        line-height:1.5em;
+}
+label {
+        display: block;
+        font-weight: 700;
+}
+legend {
+        display: block;
+        font-weight: 400;
+        font-size: 15px;
+}
+select { width: 220px; }
+input[type="checkbox"], input[type="radio"] { display: inline; }
+label span, legend span {
+        font-weight: 400;
+        font-size: 13px;
+        color: #444;
+}
+textarea { width:100%;}
+
+
+
+/*------------------------------------------------------- 
+ #Layout Styles
+ -------------------------------------------------------*/
+
+html, body {
+        width:100%;
+        background: #ffffff;
+		margin: 0px !important;
+}
+.container {
+  max-width: 1110px;
+  margin:0 auto;
+  padding: 0 30px;
+}
+.home main {
+  padding: 5% 0 0;
+}
+main {
+  padding: 50px 0;
+}
+#content{
+    float: left;
+    width: 70%;
+    padding: 0 30px 0 0;
+    box-sizing: border-box;
+}
+#full-content{
+    width: 100%;
+    padding: 0 30px 0 0;
+    box-sizing: border-box;
+}
+#right-content{
+    float: right;
+    width: 70%;
+    padding: 0 0 0 30px;
+    box-sizing: border-box;
+}
+#sidebar{
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+}
+article, .widget, header, footer{
+    background: #ffffff;
+}
+/*-------------------------------------------------------
+ Header
+ -------------------------------------------------------*/
+header {
+  box-shadow: 0 2px 6px #acacac;
+  height: 105px;
+  position: relative;
+  z-index: 1;
+}
+
+header .logo {
+    margin-top: 18px;
+}
+
+/*----------Menu Styles----------*/
+
+header nav {
+    float: right;
+}
+.menu {
+  margin: 0;
+}
+.tm-logo {
+  display: inline-block;
+  padding-top: 11px;
+}
+header nav ul li, footer .nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #000000;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    padding: 38px 18px;
+}
+header nav ul li.current-menu-item a, header nav ul li a:hover{color: #0c215b; text-decoration: none;}
+
+
+/*-------------------------------------------------------
+ Banners
+ -------------------------------------------------------*/
+
+#home-banner{position: relative;}
+#home-banner, #home-banner li{height:450px;}
+#home-banner li{background-size: cover;}
+
+
+/*-------------------------------------------------------
+ Articles
+ -------------------------------------------------------*/
+
+article {
+  margin-bottom: 20px;
+}
+.widget {
+  box-shadow: 0 0 7px #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#sidebar > .widget:last-child {
+  margin-bottom: 0;
+}
+.postmetadata {
+  background: #f1f1f1;
+  padding: 15px;
+}
+.comments-template {
+    padding: 20px 20px 20px 0;
+}
+
+
+/*-------------------------------------------------------
+ Footer
+ -------------------------------------------------------*/
+
+footer{font-size: 14px; padding: 0; }
+footer .nav ul li a { padding: 0px 22px;  color: #0c215b;}
+footer .nav ul li a:hover { color: #000000; }
+.tm-footer-top { background: #d3d3d3; padding: 50px 0; }
+.tm-footer-bottom { background: #696969; color: #ffffff; padding: 10px 0; text-align: center; }
+
+.bx-wrapper {border: medium none !important;}
+.bxslider-background .content { color: #ffffff; margin: 0 auto; max-width: 850px; padding-top: 160px; text-align: center; }
+.block-trending .container  {position: relative; }
+.collection-list.owl-carousel .item {
+  background: #eaeaea none repeat scroll 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.collection-list .owl-wrapper > div > li .banner-boder-zoom2 {
+  order: 0;
+  overflow: hidden;
+  position: relative;
+}
+.collection-list .owl-wrapper > div:nth-child(2n) > li .banner-boder-zoom2 {
+  order: 1;
+}
+.block-testimonials .section-content {
+  position: relative; margin-top: 50px;
+}
+
+.address, .phone, .mail { position: relative; line-height: 22px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px;    display: block; }
+.address::before, .phone::before, .mail::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px; background-repeat: no-repeat;
+}
+.address::before { background-image: url("images/address-icon.png"); width: 15px; height: 25px;}
+.phone::before { background-image: url("images/phone-icon.png"); width: 15px; height: 20px;}
+.mail::before { background-image: url("images/mail-icon.png"); width: 20px; height: 15px;}
+
+.os-animation{
+  opacity: 0;
+}
+
+.os-animation.animated{
+    opacity: 1;
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.button-control {
+    text-align: center;
+    margin: 10px 0;
+}
+.button.ajax_add_to_cart {
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #aaa;
+    line-height: 35px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px; color: #aaa; background: transparent; font-weight: 400;	
+}
+.button.ajax_add_to_cart:hover { background: #0c215b; color: #ffffff; border-color: #0c215b; } 
+.owl-carousel .owl-item li { margin-right: 10px; }
+.blogs-carousel .post-title {
+    height: 40px;
+}
+.post-thumb.image-hover2 {
+    height: 200px;
+    position: relative;
+}
+.uk-position-relative {
+    height: 350px;
+    position: relative; overflow: hidden;
+}
+.post-thumb-bg, .uk-background-cover { position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+background-size: cover;}
+.uk-background-cover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+}
+.uk-page-title {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 42px;
+    color: #0c215b;
+}
+.header-page-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    color: #0c215b;
+}

@@ -1,0 +1,25 @@
+/*-------------------------------------------------------
+ Responsive
+ -------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+header .logo > img {
+  max-width: 80%;
+}
+header {
+  height: 85px;
+}
+
+header .logo {
+    margin-top: 10px;
+}
+
+#content, #sidebar, #right-content {
+  float: none;
+  margin: 0 auto;
+  padding: 0;
+  width: auto;
+}
+#sidebar {
+  margin-top: 20px !important;
+}
+}
