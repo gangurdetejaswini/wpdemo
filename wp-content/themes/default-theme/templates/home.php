@@ -6,7 +6,7 @@
  ?>
 <?php get_header(); ?>
 
-<div class="block-banner8 test">
+<div class="block-banner8">
 	<div class="container">
 		<div class="row">
 			<div class="item col-sm-4 os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">
